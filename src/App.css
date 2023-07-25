@@ -6,4 +6,19 @@
   color: white;
   margin-left: 2%;
   padding-left: 0.8rem;
+  width: 23%;
+}
+.row div {
+  display: inline-block;
+}
+.inp-container input {
+  width: 90%;
+  height: 2.5rem;
+  display: inline-block;
+}
+.inp-container button {
+  background-color: #dadada;
+  width: 10%;
+  height: 2.5rem;
+  border: none;
 }
