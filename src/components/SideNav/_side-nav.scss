@@ -1,0 +1,35 @@
+@import "../../styles/sass/mixins";
+@import "../../styles/sass/varibles";
+
+.side-nav {
+  height: 99%;
+  // background-color: ;
+  box-shadow: 1px 0 14px 0 lightgrey;
+  border-radius: 1em;
+  margin-top: 1em;
+  padding: 0.6em;
+}
+.section-title {
+  padding: 1em;
+  h3 {
+    text-align: center;
+  }
+}
+.indvidual-category {
+  .category-title {
+  }
+  ul {
+    padding: 0;
+  }
+  .sub-items {
+    text-align: center;
+    margin-bottom: 0.6em;
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      color: black;
+      @include underline-trasition(0.4);
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import React from "react";
-import "./TopNav.css";
+import "./_top-nav.scss";
 
 export default function TopNav() {
   return (
     <div>
       <div className="header bg-dark">
-        <div className="row bg-dark">
+        <div className="row bg-dark top-row">
           <div className="brand my-1 col-3">
             <h1>eStore</h1>
           </div>
