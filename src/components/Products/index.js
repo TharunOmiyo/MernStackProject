@@ -1,20 +1,15 @@
 import React from "react";
 import "./_products.scss";
+import { useSelector } from "react-redux";
+import productSlice from "../../store/slices/productSlice";
 
 const Products = () => {
-  const products = [
-    { name: "Jacket", price: 45, img: "shop-1.jpg" },
-    { name: "Purse", price: 45, img: "shop-2.jpg" },
-    { name: "Dress", price: 45, img: "shop-3.jpg" },
-    { name: "Denim", price: 45, img: "shop-4.jpg" },
-    { name: "Boots", price: 45, img: "shop-5.jpg" },
-    { name: "Bag", price: 45, img: "shop-6.jpg" },
-  ];
+  const products = useSelector(productSlice.getInitialState);
   return (
     <div className="product-container">
       {products.map((product, key) => {
         return (
-          <div className=" mx-5 p-3  product-cart">
+          <div className=" mx-5 p-3  product-cart" key={key}>
             <div className="product-image-container">
               <img
                 src={require("../../assets/images/shop/" + product.img)}
