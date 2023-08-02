@@ -2,6 +2,7 @@ import React from "react";
 import "./_top-nav.scss";
 
 export default function TopNav() {
+  console.log("Top NaV");
   return (
     <div>
       <div className="header bg-dark">

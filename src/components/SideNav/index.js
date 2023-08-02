@@ -1,16 +1,17 @@
 import React from "react";
 import "./_side-nav.scss";
 import { useSelector } from "react-redux";
-import accordionSlice from "../../store/slices/accordionSlice";
+import accordionSlice from "../../Redux/Accordion/accordionSlice";
 
 export default function SideNav() {
   const AccordionData = useSelector(accordionSlice.getInitialState);
+  console.log("ide NaV");
   function listItem() {
     let counter = 0;
     const AccordionLength = AccordionData.length - 1;
     return AccordionData.map((item, index) => {
       const { category, items } = item;
-      console.log(items.length, category, items, AccordionLength);
+      // console.log(items.length, category, items, AccordionLength);
       if (index == AccordionLength) {
         return items.map((item, key) => {
           return (
