@@ -17,7 +17,7 @@ export default function SideNav() {
   const [product, setProduct] = useState();
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(130);
-  console.log("ide NaV");
+  // console.log("ide NaV");
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -29,11 +29,11 @@ export default function SideNav() {
 
   const filterData = (selectedCategory) => {
     console.log(product);
-    console.log(selectedCategory);
+    // console.log(selectedCategory);
     const products = Object.keys(product);
     const payload = { selectedCategory, product };
     // const filterin=
-    console.log(products);
+    // console.log(products);
     dispatch(filterProducts(payload));
   };
   function applyPriceFilter() {

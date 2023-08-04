@@ -6,7 +6,7 @@ import "./_product-details.scss";
 
 export default function ProductDetails() {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const dispatch = useDispatch();
   const addCart = () => {
     dispatch(addCartItem(location.state));

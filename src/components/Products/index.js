@@ -10,14 +10,14 @@ const Products = () => {
   const products = useSelector((state) => state.pr.Products);
   const cart = useSelector((state) => state.cr);
   const dispatch = useDispatch();
-  console.log("PRoduct NaV");
+  // console.log("PRoduct NaV");
   useEffect(() => {
     dispatch(getProducts());
   }, []);
 
   function addCart(itemCart) {
     const payload = { ...itemCart, quantity: 1 };
-    console.log(payload);
+    // console.log(payload);
     dispatch(addCartItem(payload));
   }
   return (

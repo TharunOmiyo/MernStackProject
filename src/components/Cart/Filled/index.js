@@ -11,7 +11,7 @@ export default function FilledCart() {
   const dispatch = useDispatch();
   function updateQuantity(e, item, index) {
     let operator = e.target.innerText;
-    console.log(operator, index, item);
+    // console.log(operator, index, item);
     const payload = {
       operator: operator,
       item,
@@ -20,7 +20,7 @@ export default function FilledCart() {
     dispatch(updateItemQuantity(payload));
   }
   function deleteHandler(item) {
-    console.log(item);
+    // console.log(item);
     dispatch(deleteCartItems(item));
   }
   return (

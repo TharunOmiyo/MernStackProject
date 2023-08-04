@@ -19,7 +19,7 @@ const categorySlice = createSlice({
     [getCategories.fulfilled]: (state, action) => {
       state.status = "Success";
       state.categories = action.payload;
-      console.log(state.status, state.categories);
+      // console.log(state.status, state.categories);
     },
     [getCategories.rejected]: (state, action) => {
       state.status = "Failed";
@@ -27,7 +27,7 @@ const categorySlice = createSlice({
     },
   },
 });
-console.log(categorySlice.reducer);
-console.log(initialState.status, initialState.categories);
+// console.log(categorySlice.reducer);
+// console.log(initialState.status, initialState.categories);
 
 export default categorySlice.reducer;

@@ -23,10 +23,10 @@ const cartSlice = createSlice({
         state.totalQuantity = ++state.totalQuantity;
         state.totalItems = ++state.totalItems;
       }
-      console.log(state.cartItems, state.totalQuantity);
+      // console.log(state.cartItems, state.totalQuantity);
     },
     updateItemQuantity: (state, action) => {
-      console.log(state.cartItems);
+      // console.log(state.cartItems);
 
       let index = action.payload.index;
       if (action.payload.operator == "+") {
@@ -36,7 +36,7 @@ const cartSlice = createSlice({
       }
     },
     deleteCartItems: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       const filteredData = state.cartItems.filter((ele) => {
         return ele.id !== action.payload.id;
       });

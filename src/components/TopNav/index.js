@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./_top-nav.scss";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
+import { gapi } from "gapi-script";
 
 export default function TopNav() {
-  console.log("Top NaV");
+  // console.log("Top NaV");
   const cartItemCount = useSelector((state) => state.cr.totalItems);
-  console.log(cartItemCount);
+  const [userName, setUsername] = useState("");
+  // console.log(cartItemCount);
+  function successHandler(res) {
+    console.log(res.profileObj.name);
+    console.log(res);
+    setUsername(res.profileObj);
+  }
   return (
     <div>
       <div className=" container-fluid header bg-dark">
@@ -31,11 +39,16 @@ export default function TopNav() {
           <div className="login-register p-0 col-2">
             <i className="fa fa-user-circle user-icon" />
             <h5>
-              <a>login</a>
-            </h5>
-            /
-            <h5>
-              <a>Register</a>
+              {userName == "" ? (
+                <GoogleLogin
+                  buttonText="login"
+                  clientId="475334119438-ppb6heganq8eqhanp5vfi79fibrtr1tp.apps.googleusercontent.com"
+                  cookiePolicy="single_host_origin"
+                  onSuccess={successHandler}
+                />
+              ) : (
+                userName.name
+              )}
             </h5>
           </div>
           <div className="cart-wishlist col-1 ">

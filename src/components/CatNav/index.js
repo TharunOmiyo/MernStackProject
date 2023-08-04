@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 export default function CatNav() {
   const Category = useSelector((state) => state.categoryReducer.categories);
   const dispatch = useDispatch();
-  console.log(Category, "start");
+  // console.log(Category, "start");
   useEffect(() => {
-    console.log(Category, "inside before");
+    // console.log(Category, "inside before");
     dispatch(getCategories());
-    console.log(Category, "inside after");
+    // console.log(Category, "inside after");
   }, []);
   console.log(Category, "End");
   return (

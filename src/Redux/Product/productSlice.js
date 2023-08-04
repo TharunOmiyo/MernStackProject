@@ -12,7 +12,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     filterProducts: (state, action) => {
-      console.log(action.payload, "From Slice");
+      // console.log(action.payload, "From Slice");
       const filteredProduct = action.payload.product.Products.filter((e) => {
         return (
           e.category_id == action.payload.selectedCategory.parent_category_id
@@ -22,7 +22,7 @@ const productSlice = createSlice({
     },
     filterByPrice: (state, action) => {
       const filterProduct = action.payload.product.Products.filter((e) => {
-        console.log(e.price);
+        // console.log(e.price);
         return e.price >= action.payload.min && e.price <= action.payload.max;
       });
       state.Products = filterProduct;
